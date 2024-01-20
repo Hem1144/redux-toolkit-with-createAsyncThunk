@@ -1,14 +1,19 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 
 const Create = () => {
   const [users, setUsers] = useState({});
+
+  const dispatch = useDispatch();
 
   const getUserData = (e) => {
     setUsers({ ...users, [e.target.name]: e.target.value });
     console.log(users);
   };
 
-  const handleSubmit = () => {};
+  const handleSubmit = () => {
+    dispatch();
+  };
 
   return (
     <div>
